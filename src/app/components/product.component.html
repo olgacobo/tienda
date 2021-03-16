@@ -2,9 +2,16 @@
  <div class="product">
  
     <img [src]="product.image"alt="" />
+
     <div class="caca">
-        <h2>{{ product.title }}</h2>
-        <strong>{{ product.price }}</strong>
+
+        <h2>{{ product.title | uppercase }}</h2> <!--este pipe transforma todo el texto a mayuscula-->
+
+        <p>{{ product.description | slice:0:20 }}</p><!--este pipe corta el texto a los 20 caracteres-->
+
+        <strong>{{ product.price | currency:"EUR":"symbol"}}</strong><!--este pipe te lo pone como un precio en euros-->
+
+        <!--<p>{{ today | date:'shortDate' }}</p>este pipe te saca la fecha de hoy-->
     </div> 
 </div>
 

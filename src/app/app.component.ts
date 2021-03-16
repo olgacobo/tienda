@@ -31,7 +31,7 @@ export class AppComponent {
       id: '3',
       image: 'assets/img/mug.png',
       title: 'Taza',
-      price: 80000,
+      price: 60000,
       description: 'Descripcion de la taza'
     },
     {
@@ -45,14 +45,14 @@ export class AppComponent {
       id: '5',
       image: 'assets/img/stickers1.png',
       title: 'Stickers',
-      price: 80000,
+      price: 3000,
       description: 'Descripcion del sticker 1'
     },
     {
       id: '6',
       image: 'assets/img/stickers2.png',
       title: 'Stickers',
-      price: 80000,
+      price: 200,
       description: 'Descripcion del sticker 2'
     }
   ];

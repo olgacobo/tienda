@@ -26,6 +26,9 @@ export class ProductComponent implements /*OnChanges,*/ OnInit, DoCheck, OnDestr
     // creo un evento, any significa el tipo que necesita, en este caso cualquiera
     @Output() productClicked: EventEmitter<any> = new EventEmitter();
 
+
+    today = new Date();
+
     // creo el constructor, para ver cuando se ejecuta
     constructor(){
         console.log('1. constructor');
