@@ -6,13 +6,14 @@
     border-radius: 5px;
     background-color: #00d4ff;
 }
-h3 {
+.caca{
     text-align: center;
     background-color:#273b47;
     margin: 0;
     padding: 20px;
     color: #fff;
 }
+
 img {
     max-width: 100%;
     height: 440px;
@@ -33,9 +34,11 @@ button {
     height: 50px;
     color: #fff;
     size: 20em;
+    border: none;
 }
 button:hover {
     background-color:#fff;
     transition: background-color 0.2s ease;
+    color: black;
     
 }
