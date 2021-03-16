@@ -1,1 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
+//archivo de estilos global
+
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+.product-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));// nos hará breakpoints cada 300px
+}
+
+// @media (min-width: 576px){ //para poner en cada pantalla una generacion de los contenedores
+//     .product-grid{
+//         display: grid;
+//         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));// nos hará breakpoints cada 300px
+//     }
+// }

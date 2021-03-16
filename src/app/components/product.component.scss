@@ -1,0 +1,10 @@
+//solo va a afectar a lo que este deltro de ese componente
+:host{ //referencia por defecto a nuestro contenedor <app-product>
+    border: 1px solid black; //borde de cada contenedor
+    margin: 2px;
+    border-radius: 5px;
+    display: block; //para que el ancho y largo sean dinamicos respecto al resto
+}
+img{
+    max-width: 100%; //se adapta al 100% del contenedor en el que este
+}
