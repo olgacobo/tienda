@@ -55,7 +55,7 @@ export class AppComponent {
       price: 80000,
       description: 'Descripcion del sticker 2'
     }
-  ]
+  ];
 
 
   // creo una funcion metodo para añadir items (todos se llamaran nuevo item)

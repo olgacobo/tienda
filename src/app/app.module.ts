@@ -6,11 +6,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 // importo la clase que he creado en product component
 import { ProductComponent } from './components/product.component';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProductComponent // añado la clase
+    ProductComponent, // añado la clase
+    CartComponent // añadida automaticamente al crearlo desde comandos
   ],
   imports: [
     BrowserModule,

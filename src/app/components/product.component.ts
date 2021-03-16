@@ -1,6 +1,6 @@
-/* decorador da contexto, es la manera en que angular puede saber que 
+/* decorador da contexto, es la manera en que angular puede saber que
 tipo de error va a servir esta clase*/
-import { 
+import {
     Component,
     Input,
     Output,
@@ -30,18 +30,18 @@ export class ProductComponent implements /*OnChanges,*/ OnInit, DoCheck, OnDestr
     constructor(){
         console.log('1. constructor');
     }
-    
+
     // ngOnchanges, hay que implementar una interfaz de llamada, arriba
     // tslint:disable-next-line: typedef
     // ngOnChanges(changes: SimpleChanges) {
     //     console.log('2. ngOnchanges');
     //     console.log(changes);
     // }
-    
+
     ngOnInit(){
-        console.log('3. ngOnInit')
+        console.log('3. ngOnInit');
     }
-    //colisiona con ngOnChanges, ya que los 2 detectan cambios
+    // colisiona con ngOnChanges, ya que los 2 detectan cambios
     ngDoCheck(){
         console.log('4. ngDoCheck');
     }
