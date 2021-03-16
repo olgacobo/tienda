@@ -2,4 +2,9 @@
 <h3>{{ product.title }}</h3>
 <img [src]="product.image" alt="">
 <strong>{{ product.price }}</strong>
+
+
+<!--  vamos a agracar un boton de output para añadirlos a la cesta
+el metodo esta definido en product.component.ts -->
+<button (click)="addCesta()">A&ntilde;adir a la cesta</button>
     

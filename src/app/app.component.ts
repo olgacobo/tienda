@@ -57,6 +57,7 @@ export class AppComponent {
     }
   ]
 
+
   // creo una funcion metodo para añadir items (todos se llamaran nuevo item)
   addItem(){
     this.items.push('nuevo item');
@@ -65,6 +66,12 @@ export class AppComponent {
   // creo un metodo para borrar items
   deleteItem(index: number){
     this.items.splice(index, 1); // la posicion que queremos borrar, y cuantos elementos queremos borrar a partir de esa posicion
+  }
+
+  // creo una funcion para sacar el output
+  clickProduct(id: number){
+    console.log('product');
+    console.log(id);
   }
 
 }

@@ -6,7 +6,7 @@ conectado con app.module.ts-->
 {{ title }}
 
 <!-- esto viene del selector que he creado en product.component.ts -->
-<app-product></app-product>
+
 
 <!--Permite poner condicionales, si es true lo de las comillas, me mostrara el div,
 permite mostrar elementos dinamicamente
@@ -48,17 +48,13 @@ permite mostrar elementos dinamicamente
     </li>
 </ul>
 
-<!-- vamos a recorrer un array de objetos -->
+<!-- vamos a recorrer un array de objetos, me va a sacar directamente todas las 
+propiedades del producto, el input entre [] y el outpu entre() , el metodo del output
+lo creamos en app.components.ts-->
 <div *ngFor="let producto of products">
-    {{ producto .title }}
-
-    <!-- para sacar la imagen y no su url tenemos que ponerlo dentro de una etiqueta img,
-         importante [] en el src -->
-    <img [src]="producto.image" alt="">
-    
-    {{ producto .price }}
-    
-
+    <!-- angular directamente va a sacar $event del evento que hemos creado en product.component.ts,
+    este es el componente padre que recibe la informacion del evento del hijo-->
+    <app-product (productClicked)="clickProduct($event)" [product]="producto"></app-product>
 </div>
 
 
