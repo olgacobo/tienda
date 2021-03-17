@@ -6,13 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 // importo la clase que he creado en product component
 import { ProductComponent } from './components/product.component';
-import { CartComponent } from './cart/cart.component';
+import { CartComponent } from './cart/cart.component'; // componente creado desde la cmd
+import { ExponentialPipe } from './pipes/exponential.pipe'; // pipe que he creado con ng g p exponential
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductComponent, // añado la clase
-    CartComponent // añadida automaticamente al crearlo desde comandos
+    CartComponent, ExponentialPipe // añadida automaticamente al crearlo desde comandos
   ],
   imports: [
     BrowserModule,

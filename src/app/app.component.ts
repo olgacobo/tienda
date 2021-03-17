@@ -11,6 +11,10 @@ export class AppComponent {
 
   items = ['Olga', 'Violeta', 'Tania']; // creo array
 
+
+  // creo e inicializo un power para usar la pipe
+  power = 10;
+
   // creo mi array de productos, importante []
   products: Product[] = [
     {

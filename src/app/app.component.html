@@ -1,9 +1,17 @@
+<!-- para implementar la pipe que he creado -->
+Introduce el numero que quieres elevar al cuadrado: 
+<input type="text" [(ngModel)]="power"> 
+{{ power | exponential }} <br><br>
+
+
+
 <!--Me saca un cuadro de texto donde escribo u al lado me saca lo que estoy escribiendo en tiempo real,
 conectado con app.module.ts-->
+Introduce un nombre: 
 <input type="text" [(ngModel)]="title"> 
 
 <!-- String interpolation , cone sto puedes concatenar intrucciones javascript, title esta inicializaso en app.component.ts-->
-{{ title }}
+<!-- {{ title }} -->
 
 <!-- esto viene del selector que he creado en product.component.ts -->
 
