@@ -9,7 +9,10 @@ import { ProductComponent } from './components/product.component';
 import { CartComponent } from './cart/cart.component'; // componente creado desde la cmd
 import { ExponentialPipe } from './pipes/exponential.pipe'; // pipe que he creado con ng g p exponential, importado automaticamente
 import { HighlightDirective } from './directivas/highlight.directive';
-import { CambioDirective } from './directivas/cambio.directive'; // directiva que he creado con ng g d highlight, importado automaticamente
+import { CambioDirective } from './directivas/cambio.directive';
+import { HomeComponent } from './home/home.component';
+import { ProductsComponent } from './products/products.component';
+import { ContactComponent } from './contact/contact.component'; // directiva que he creado con ng g d highlight, importado automaticamente
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { CambioDirective } from './directivas/cambio.directive'; // directiva qu
     CartComponent,
     ExponentialPipe, // añadida automaticamente al crearlo desde cmd con ng g p nombrePipe
     HighlightDirective,
-    CambioDirective // añadida automaticamente al crearlo desde cmd con ng g d nombreDirectiva
+    CambioDirective,
+    HomeComponent,
+    ProductsComponent,
+    ContactComponent // añadida automaticamente al crearlo desde cmd con ng g d nombreDirectiva
   ],
   imports: [
     BrowserModule,
