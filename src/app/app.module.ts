@@ -7,13 +7,16 @@ import { AppComponent } from './app.component';
 // importo la clase que he creado en product component
 import { ProductComponent } from './components/product.component';
 import { CartComponent } from './cart/cart.component'; // componente creado desde la cmd
-import { ExponentialPipe } from './pipes/exponential.pipe'; // pipe que he creado con ng g p exponential
+import { ExponentialPipe } from './pipes/exponential.pipe'; // pipe que he creado con ng g p exponential, importado automaticamente
+import { HighlightDirective } from './highlight.directive'; // directiva que he creado con ng g d highlight, importado automaticamente
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductComponent, // añado la clase
-    CartComponent, ExponentialPipe // añadida automaticamente al crearlo desde comandos
+    CartComponent,
+    ExponentialPipe, // añadida automaticamente al crearlo desde cmd con ng g p nombrePipe
+    HighlightDirective // añadida automaticamente al crearlo desde cmd con ng g d nombreDirectiva
   ],
   imports: [
     BrowserModule,
