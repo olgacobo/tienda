@@ -16,6 +16,7 @@ export class HomeComponent implements OnInit,AfterViewInit {
   }
 
   ngAfterViewInit(){
+    // le digo a mi swiper que clase del css vamos a llamar
     this.mySwiper = new Swiper('.swiper-container');
   }
 
