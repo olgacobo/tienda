@@ -12,7 +12,8 @@ import { HighlightDirective } from './directivas/highlight.directive';
 import { CambioDirective } from './directivas/cambio.directive';
 import { HomeComponent } from './home/home.component';
 import { ProductsComponent } from './products/products.component';
-import { ContactComponent } from './contact/contact.component'; // directiva que he creado con ng g d highlight, importado automaticamente
+import { ContactComponent } from './contact/contact.component';
+import { DemoComponent } from './demo/demo.component'; // directiva que he creado con ng g d highlight, importado automaticamente
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ContactComponent } from './contact/contact.component'; // directiva que
     CambioDirective,
     HomeComponent,
     ProductsComponent,
-    ContactComponent // añadida automaticamente al crearlo desde cmd con ng g d nombreDirectiva
+    ContactComponent,
+    DemoComponent // añadida automaticamente al crearlo desde cmd con ng g d nombreDirectiva
   ],
   imports: [
     BrowserModule,

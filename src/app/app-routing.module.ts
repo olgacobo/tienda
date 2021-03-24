@@ -1,9 +1,10 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { HomeComponent } from './home/home.component';
 import { ProductsComponent } from './products/products.component';
 import { ContactComponent } from './contact/contact.component';
+import { DemoComponent } from './demo/demo.component';
 
 
 // importante poner en el app.component.html <router-outlet></router-outlet>
@@ -19,6 +20,10 @@ const routes: Routes = [
   {
     path: 'contact',
     component: ContactComponent
+  },
+  {
+    path: 'demo',
+    component: DemoComponent
   }
 
 ];
