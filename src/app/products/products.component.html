@@ -1,1 +1,11 @@
-<p>products works!</p>
+<!-- vamos a recorrer un array de objetos, me va a sacar directamente todas las 
+propiedades del producto, el input entre [] y el outpu entre() , el metodo del output
+lo creamos en app.components.ts-->
+<div class="product-grid">
+    <!-- angular directamente va a sacar $event del evento que hemos creado en product.component.ts,
+    este es el componente padre que recibe la informacion del evento del hijo-->
+    <app-product 
+    *ngFor="let producto of products" 
+    (productClicked)="clickProduct($event)" 
+    [product]="producto"></app-product>
+</div>
