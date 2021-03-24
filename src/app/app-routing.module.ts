@@ -6,6 +6,7 @@ import { ProductsComponent } from './products/products.component';
 import { ContactComponent } from './contact/contact.component';
 import { DemoComponent } from './demo/demo.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 
 // importante poner en el app.component.html <router-outlet></router-outlet>
@@ -23,6 +24,10 @@ const routes: Routes = [
   {
     path: 'products',
     component: ProductsComponent
+  },
+  {
+    path: 'products/:id', // no puede ser solo products porque colisionarian las rutas, va a renderizar el productdetailcomponent
+    component: ProductDetailComponent
   },
   {
     path: 'contact',
