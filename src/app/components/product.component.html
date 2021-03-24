@@ -4,9 +4,10 @@
     <img [src]="product.image"alt="" />
 
     <div class="caca">
-
+        <!-- estoy llamanfo al selector de mi directiva dentro de la etiqueta -->
         <h2 appHighlight>{{ product.title | uppercase }}</h2> <!--este pipe transforma todo el texto a mayuscula-->
 
+        <!--  NO FUNCIONA -->
         <p>{{ product.description | slice:0:20 }}</p><!--este pipe corta el texto a los 20 caracteres-->
 
         <strong>{{ product.price | currency:"EUR":"symbol"}}</strong><!--este pipe te lo pone como un precio en euros-->

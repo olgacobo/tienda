@@ -1,11 +1,11 @@
-import { Directive, ElementRef } from '@angular/core'; //ElementRef es el que modificca el comportamiento por defecto del DOM
+import { Directive, ElementRef } from '@angular/core'; // ElementRef es el que modificca el comportamiento por defecto del DOM
 
 @Directive({
   selector: '[appHighlight]'
 })
 export class HighlightDirective {
 
-  constructor(  //hacemos una inyeccion de dependencias
+  constructor(  // hacemos una inyeccion de dependencias
     element: ElementRef
   ) {
     /* hago referencia a ese elemento, pido el elemento nativo de html y lo modifico con style y cambio su color de fondo, 
