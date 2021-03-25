@@ -10,13 +10,11 @@ import { CartComponent } from './cart/cart.component'; // componente creado desd
 import { ExponentialPipe } from './pipes/exponential.pipe'; // pipe que he creado con ng g p exponential, importado automaticamente
 import { HighlightDirective } from './directivas/highlight.directive'; // directiva que he creado con ng g d highlight, importado automaticamente
 import { CambioDirective } from './directivas/cambio.directive';
-import { HomeComponent } from './home/home.component';
 import { ProductsComponent } from './products/products.component';
 import { ContactComponent } from './contact/contact.component';
 import { DemoComponent } from './demo/demo.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { BannerComponent } from './banner/banner.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { LayoutComponent } from './layout/layout.component';
@@ -29,13 +27,11 @@ import { LayoutComponent } from './layout/layout.component';
     ExponentialPipe, // añadida automaticamente al crearlo desde cmd con ng g p nombrePipe
     HighlightDirective,
     CambioDirective,
-    HomeComponent,
     ProductsComponent,
     ContactComponent,
     DemoComponent,
     HeaderComponent,
     FooterComponent,
-    BannerComponent,
     PageNotFoundComponent,
     ProductDetailComponent,
     LayoutComponent // añadida automaticamente al crearlo desde cmd con ng g d nombreDirectiva
