@@ -23,7 +23,7 @@ const routes: Routes = [
       },
       {
         path: 'home',
-        //component: HomeComponent
+        // component: HomeComponent
         // ahora llamaremos al modulo del home
         loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
       },
@@ -54,7 +54,7 @@ const routes: Routes = [
 @NgModule({
   // le vamos a decir que dinamicamente escoja una estrategia de precarga
   imports: [RouterModule.forRoot(routes, {
-    preloadingStrategy:PreloadAllModules
+    preloadingStrategy: PreloadAllModules
   })],
   exports: [RouterModule]
 })
