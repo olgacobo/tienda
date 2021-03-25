@@ -5,16 +5,12 @@ import { FormsModule } from '@angular/forms'; // añado el paquete de formulario
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 // importo la clase que he creado en product component
-import { ProductComponent } from './components/product.component';
+import { ProductComponent } from './product/product.component';
 import { CartComponent } from './cart/cart.component'; // componente creado desde la cmd
-import { ExponentialPipe } from './pipes/exponential.pipe'; // pipe que he creado con ng g p exponential, importado automaticamente
-import { HighlightDirective } from './directivas/highlight.directive'; // directiva que he creado con ng g d highlight, importado automaticamente
-import { CambioDirective } from './directivas/cambio.directive';
+
 import { ProductsComponent } from './products/products.component';
 import { ContactComponent } from './contact/contact.component';
 import { DemoComponent } from './demo/demo.component';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { LayoutComponent } from './layout/layout.component';
@@ -24,14 +20,9 @@ import { LayoutComponent } from './layout/layout.component';
     AppComponent,
     ProductComponent, // añado la clase
     CartComponent,
-    ExponentialPipe, // añadida automaticamente al crearlo desde cmd con ng g p nombrePipe
-    HighlightDirective,
-    CambioDirective,
     ProductsComponent,
     ContactComponent,
     DemoComponent,
-    HeaderComponent,
-    FooterComponent,
     PageNotFoundComponent,
     ProductDetailComponent,
     LayoutComponent // añadida automaticamente al crearlo desde cmd con ng g d nombreDirectiva
