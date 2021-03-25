@@ -1,5 +1,5 @@
 import { Component, NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes, PreloadAllModules } from '@angular/router';
 
 import { ProductsComponent } from './products/products.component';
 import { ContactComponent } from './contact/contact.component';
@@ -24,6 +24,8 @@ const routes: Routes = [
       {
         path: 'home',
         //component: HomeComponent
+        // ahora llamaremos al modulo del home
+        loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
       },
       {
         path: 'products',
@@ -46,36 +48,14 @@ const routes: Routes = [
         component: PageNotFoundComponent
       }
     ]
-  },
-  {
-    path: 'home',
-    component: HomeComponent
-  },
-  {
-    path: 'products',
-    component: ProductsComponent
-  },
-  {
-    path: 'products/:id', // no puede ser solo products porque colisionarian las rutas, va a renderizar el productdetailcomponent
-    component: ProductDetailComponent
-  },
-  {
-    path: 'contact',
-    component: ContactComponent
-  },
-  {
-    path: 'demo',
-    component: DemoComponent
-  },
-  {
-    path: '**', // significa que no hubo match
-    component: PageNotFoundComponent
   }
-
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  // le vamos a decir que dinamicamente escoja una estrategia de precarga
+  imports: [RouterModule.forRoot(routes, {
+    preloadingStrategy:PreloadAllModules
+  })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
