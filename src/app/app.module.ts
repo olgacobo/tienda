@@ -15,6 +15,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { LayoutComponent } from './layout/layout.component';
 
+import { SharedModule } from './shared/shared.module';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +32,8 @@ import { LayoutComponent } from './layout/layout.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule // formularios de angular, lo ponemos aqui para que tenga consecuencia en nuestros imports
+    FormsModule, // formularios de angular, lo ponemos aqui para que tenga consecuencia en nuestros imports
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

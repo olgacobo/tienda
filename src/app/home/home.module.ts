@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { BannerComponent } from '../home/components/banner/banner.component';
 import { HomeComponent } from './home/home.component';
 import { HomeRoutingModule } from './home-routing.module';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
     // componentes que va a tener este modulo
@@ -12,7 +13,8 @@ import { HomeRoutingModule } from './home-routing.module';
     ],
     imports: [
         HomeRoutingModule,
-        CommonModule
+        CommonModule,
+        SharedModule
     ]
 })
 
