@@ -22,15 +22,13 @@ export class DemoComponent implements OnInit {
   }
 
   // creo una funcion metodo para añadir items (todos se llamaran nuevo item)
-  addItem(){
+  addItem(): void{
     this.items.push('nuevo item');
   }
 
   // creo un metodo para borrar items
-  deleteItem(index: number){
+  deleteItem(index: number): void{
     this.items.splice(index, 1); // la posicion que queremos borrar, y cuantos elementos queremos borrar a partir de esa posicion
   }
-
-  
 
 }

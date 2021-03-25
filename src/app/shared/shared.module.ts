@@ -21,7 +21,7 @@ import { CambioDirective } from './directivas/cambio/cambio.directive';
     // importante para que podamos usarlos desde cualquier modulo al que importemos shared
     HeaderComponent,
     FooterComponent,
-    ExponentialPipe, 
+    ExponentialPipe,
     HighlightDirective,
     CambioDirective
   ],
