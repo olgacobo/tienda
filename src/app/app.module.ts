@@ -10,7 +10,6 @@ import { CartComponent } from './cart/cart.component'; // componente creado desd
 
 import { ProductsComponent } from './products/products.component';
 
-import { DemoComponent } from './demo/demo.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { LayoutComponent } from './layout/layout.component';
@@ -24,7 +23,6 @@ import {CoreModule  } from './core/core.module';
     ProductComponent, // añado la clase
     CartComponent,
     ProductsComponent,
-    DemoComponent,
     PageNotFoundComponent,
     ProductDetailComponent,
     LayoutComponent // añadida automaticamente al crearlo desde cmd con ng g d nombreDirectiva

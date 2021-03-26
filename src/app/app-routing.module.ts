@@ -3,13 +3,12 @@ import { RouterModule, Routes, PreloadAllModules } from '@angular/router';
 
 import { ProductsComponent } from './products/products.component';
 
-import { DemoComponent } from './demo/demo.component';
+import { DemoComponent } from './demo/components/demo/demo.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { LayoutComponent } from './layout/layout.component';
 
-import { AdminGuard } from './admin.guard';
-
+// import { AdminGuard } from './admin.guard';
 
 // importante poner en el app.component.html <router-outlet></router-outlet>
 const routes: Routes = [
@@ -44,7 +43,7 @@ const routes: Routes = [
       },
       {
         path: 'demo',
-        component: DemoComponent
+        loadChildren: () => import('./demo/demo.module').then(m => m.DemoModule)
       },
       {
         path: '**', // significa que no hubo match

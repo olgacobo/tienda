@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router'; // la primera es una inyeccion de dependencia, la segunta un tipado 
 import { ProductsService } from '../core/services/products/products.service'; // inyección de dependencias
-import { Product } from '../product.model';
+import { Product } from '../core/models/product.model';
 
 
 @Component({
