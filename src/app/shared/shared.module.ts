@@ -9,6 +9,8 @@ import { ExponentialPipe } from './pipes/exponential/exponential.pipe';
 import { HighlightDirective } from './directivas/highlight/highlight.directive';
 import { CambioDirective } from './directivas/cambio/cambio.directive';
 
+import { MaterialModule } from '../material/material.module';
+
 @NgModule({
   declarations: [
     HeaderComponent,
@@ -27,7 +29,8 @@ import { CambioDirective } from './directivas/cambio/cambio.directive';
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    MaterialModule
   ]
 })
 export class SharedModule { }
