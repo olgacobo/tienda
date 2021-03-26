@@ -1,11 +1,7 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes, PreloadAllModules } from '@angular/router';
 
-import { ProductsComponent } from './products/products.component';
-
 import { DemoComponent } from './demo/components/demo/demo.component';
-import { PageNotFoundComponent } from './page-not-found/components/page-not-found/page-not-found.component';
-import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { LayoutComponent } from './layout/layout.component';
 
 // import { AdminGuard } from './admin.guard';
@@ -30,11 +26,7 @@ const routes: Routes = [
       },
       {
         path: 'products',
-        component: ProductsComponent
-      },
-      {
-        path: 'products/:id', // no puede ser solo products porque colisionarian las rutas, va a renderizar el productdetailcomponent
-        component: ProductDetailComponent
+        loadChildren: () => import('./product/product.module').then(m => m.ProductModule)
       },
       {
         path: 'contact',
@@ -47,7 +39,7 @@ const routes: Routes = [
       },
       {
         path: '**', // significa que no hubo match
-        component: PageNotFoundComponent
+        loadChildren: () => import('./page-not-found/page-not-found.module').then(m => m.PageNotFoundModule)
       }
     ]
   }

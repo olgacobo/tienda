@@ -11,7 +11,7 @@ import {
     DoCheck,
     OnDestroy
 } from '@angular/core';
-import { Product } from '../core/models/product.model';
+import { Product } from '../../../core/models/product.model';
 
 @Component({
     selector: 'app-product',
@@ -41,16 +41,16 @@ export class ProductComponent implements /*OnChanges,*/ OnInit, DoCheck, OnDestr
     //     console.log(changes);
     // }
 
-    ngOnInit(){
+    ngOnInit(): void{
         console.log('3. ngOnInit');
     }
     // colisiona con ngOnChanges, ya que los 2 detectan cambios
-    ngDoCheck(){
+    ngDoCheck(): void{
         console.log('4. ngDoCheck');
     }
 
     // se ejecuta cuando eliminamos algun elemento
-    ngOnDestroy(){
+    ngOnDestroy(): void{
         console.log('5. ngOnDestroy');
     }
 

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Product } from '../core/models/product.model';
+import { Product } from '../../../core/models/product.model';
 
 @Component({
   selector: 'app-products',
@@ -60,7 +60,7 @@ export class ProductsComponent implements OnInit {
   }
 
   // creo una funcion para sacar el output
-  clickProduct(id: number){
+  clickProduct(id: number): void{
     console.log('product');
     console.log(id);
   }

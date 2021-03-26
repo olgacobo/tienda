@@ -4,24 +4,19 @@ import { FormsModule } from '@angular/forms'; // añado el paquete de formulario
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-// importo la clase que he creado en product component
-import { ProductComponent } from './product/product.component';
 import { CartComponent } from './cart/cart.component'; // componente creado desde la cmd
 
-import { ProductsComponent } from './products/products.component';
-import { ProductDetailComponent } from './product-detail/product-detail.component';
+
 import { LayoutComponent } from './layout/layout.component';
 
 import { SharedModule } from './shared/shared.module';
 import {CoreModule  } from './core/core.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProductComponent, // añado la clase
     CartComponent,
-    ProductsComponent,
-    ProductDetailComponent,
     LayoutComponent // añadida automaticamente al crearlo desde cmd con ng g d nombreDirectiva
   ],
   imports: [
@@ -29,7 +24,8 @@ import {CoreModule  } from './core/core.module';
     AppRoutingModule,
     FormsModule, // formularios de angular, lo ponemos aqui para que tenga consecuencia en nuestros imports
     SharedModule,
-    CoreModule
+    CoreModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router'; // la primera es una inyeccion de dependencia, la segunta un tipado 
-import { ProductsService } from '../core/services/products/products.service'; // inyección de dependencias
-import { Product } from '../core/models/product.model';
+import { ProductsService } from '../../../core/services/products/products.service'; // inyección de dependencias
+import { Product } from '../../../core/models/product.model';
 
 
 @Component({
@@ -21,12 +21,14 @@ export class ProductDetailComponent implements OnInit {
 
   ngOnInit(): void {
     // le decimos que quiero los parametros que tenga en la ruta, y me subscribo a esos cambios de tipo params
+    // tslint:disable-next-line: deprecation
     this.route.params.subscribe((params: Params) => {
 
       const id = params.id;
       // console.log(params);
       // hago referencia para que vaya y busque en ese array un id especifico, getProduct está en products.service.ts
       // ! es para que no de error this.product ya que implica que no importa si el datos que devuelve es undefined
+      // tslint:disable-next-line: no-non-null-assertion
       this.producto = this.productsService.getProduct(id)!;
       // esto al poner la ruta mostraria todos los detalles del producto en la consola
       // console.log(producto);
