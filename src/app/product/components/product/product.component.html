@@ -19,10 +19,11 @@
 
 <!--  vamos a agracar un boton de output para añadirlos a la cesta
 el metodo esta definido en product.component.ts -->
-<button (click)="addCesta()">A&ntilde;adir a la cesta</button>
+<button (click)="addCesta()" mat-raised-button color="primary">A&ntilde;adir a la cesta</button>
+
 <!-- añado un link para ver la descripcion completa, importante [] en routerLink, podria hacerse de varias formas
 <button [routerLink]="product.id">Ver detalle</button>
 <button [routerLink]="[product.id]">Ver detalle</button>-->
-<button routerLink="{{product.id}}">Ver detalles</button>
+<button routerLink="{{product.id}}" mat-raised-button color="primary">Ver detalles</button>
 <!-- <a [routerLink]=['/products],"product.id"]>Ver detalles</a> -->
     
