@@ -4,7 +4,7 @@ import { RouterModule, Routes, PreloadAllModules } from '@angular/router';
 import { ProductsComponent } from './products/products.component';
 
 import { DemoComponent } from './demo/components/demo/demo.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { PageNotFoundComponent } from './page-not-found/components/page-not-found/page-not-found.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { LayoutComponent } from './layout/layout.component';
 
