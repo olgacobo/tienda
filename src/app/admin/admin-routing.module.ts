@@ -3,15 +3,27 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { ProductFormComponent } from './components/product-form/product-form.component';
 import { NavComponent } from './components/nav/nav.component';
+import { TableComponent } from './components/table/table.component';
+import { compileComponentFromMetadata } from '@angular/compiler';
 
 const routes: Routes = [
   {
-    path: 'create',
-    component: ProductFormComponent
-  },
-  {
     path: '',
-    component: NavComponent
+    component: NavComponent,
+    children: [
+      {
+        path: 'create',
+        component: ProductFormComponent
+      },
+      {
+        path: 'table',
+        component: TableComponent
+      },
+      {
+        path:
+        component:
+      }
+    ]
   }
 ];
 
