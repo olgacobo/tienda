@@ -7,6 +7,7 @@ footer {
   margin-top: 20px;
   background-color: mat-color($primary);
   .box {
+    color: white;
     h3 {
       color: white;
     }
@@ -20,6 +21,7 @@ footer {
       li {
         margin: 10px 0px;
         a {
+          padding-left: 0px;
           text-decoration: none;
           color: white;
         }
