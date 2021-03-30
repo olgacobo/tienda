@@ -10,7 +10,7 @@ import { CartComponent } from './cart/cart.component'; // componente creado desd
 import { LayoutComponent } from './layout/layout.component';
 
 import { SharedModule } from './shared/shared.module';
-import {CoreModule  } from './core/core.module';
+import { CoreModule  } from './core/core.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
