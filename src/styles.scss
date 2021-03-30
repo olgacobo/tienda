@@ -10,12 +10,33 @@
     grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));// nos hará breakpoints cada 500px
     grid-gap: 50px 20px;
 }
+.container{
+    width: 100%;
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-right: auto;
+    margin-left: auto;
+}
 
-// @media (min-width: 576px){ //para poner en cada pantalla una generacion de los contenedores
-//     .product-grid{
-//         display: grid;
-//         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));// nos hará breakpoints cada 300px
-//     }
-// }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+@media (min-width: 576px){ //cuando este en una pantalla igual o mas ancha:
+    .product-grid{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));// nos hará breakpoints cada 300px
+    }
+    .container{ //dejará bordes laterales
+        max-width: 1110px;
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+
+}
+html, body { 
+    height: 100%;
+}
+
+body { 
+    margin: 0; 
+    font-family: Roboto, "Helvetica Neue", sans-serif; 
+}
+
+

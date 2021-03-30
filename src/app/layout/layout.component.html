@@ -1,7 +1,11 @@
 <!--  reutilizaremos header y fooder(home.component.html) y lo que muestre entre ellos va a ser 
 el routing(app.component.html) dinámicamente, que los eliminaré de los demas-->
-<app-header></app-header>
 
-<router-outlet></router-outlet>
 
-<app-footer></app-footer>
+<div class="container">
+    <app-header></app-header>
+    <router-outlet></router-outlet>
+    <app-footer></app-footer>
+</div>
+
+
