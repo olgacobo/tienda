@@ -1,29 +1,13 @@
-<!-- el product lo llamo del product.component.ts -->
- <div class="product">
- 
-    <img [src]="product.image"alt="" />
 
-    <div class="caca">
-        <!-- estoy llamanfo al selector de mi directiva dentro de la etiqueta -->
-        <h2 appHighlight>{{ product.title | uppercase }}</h2> <!--este pipe transforma todo el texto a mayuscula-->
+<!-- estoy llamanfo al selector de mi directiva dentro de la etiqueta -->
+<h2 appHighlight>{{ product.title | uppercase }}</h2> <!--este pipe transforma todo el texto a mayuscula-->
 
-        <!--  NO FUNCIONA -->
-        <p>{{ product.description | slice:0:20 }}</p><!--este pipe corta el texto a los 20 caracteres-->
+<img [src]="product.image"alt="" />
 
-        <strong>{{ product.price | currency:"EUR":"symbol"}}</strong><!--este pipe te lo pone como un precio en euros-->
+<p>{{ product.description | slice:0:20 }}</p><!--este pipe corta el texto a los 20 caracteres-->
 
-        <!--<p>{{ today | date:'shortDate' }}</p>este pipe te saca la fecha de hoy-->
-    </div> 
-</div>
+<strong>{{ product.price | currency:"EUR":"symbol"}}</strong><!--este pipe te lo pone como un precio en euros-->
 
-
-<!--  vamos a agracar un boton de output para añadirlos a la cesta
-el metodo esta definido en product.component.ts -->
 <button (click)="addCesta()" mat-raised-button color="primary">A&ntilde;adir a la cesta</button>
 
-<!-- añado un link para ver la descripcion completa, importante [] en routerLink, podria hacerse de varias formas
-<button [routerLink]="product.id">Ver detalle</button>
-<button [routerLink]="[product.id]">Ver detalle</button>-->
 <button routerLink="{{product.id}}" mat-raised-button color="primary">Ver detalles</button>
-<!-- <a [routerLink]=['/products],"product.id"]>Ver detalles</a> -->
-    
