@@ -68,6 +68,6 @@ export class ProductsService {
   // tslint:disable-next-line: typedef
   getProduct(id: string) {
     // hago la concatenacion de la peticion con el id, `` acentos
-    return this.http.get(`http://platzi-store.herokuapp.com/products${id}`);
+    return this.http.get<Product>(`http://platzi-store.herokuapp.com/products/${id}`);
   }
 }
