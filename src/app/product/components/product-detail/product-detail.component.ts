@@ -29,6 +29,7 @@ export class ProductDetailComponent implements OnInit {
       // hago referencia para que vaya y busque en ese array un id especifico, getProduct está en products.service.ts
       // ! es para que no de error this.product ya que implica que no importa si el datos que devuelve es undefined
       // tslint:disable-next-line: no-non-null-assertion
+      // tslint:disable-next-line: deprecation
       this.productsService.getProduct(id).subscribe((m: any) => {
         this.producto = m;
       });

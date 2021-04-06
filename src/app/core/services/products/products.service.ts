@@ -58,13 +58,14 @@ export class ProductsService {
   ) { }
 
   // creo metodo para devolver todos los datos de nuestros productos
+  // tslint:disable-next-line: typedef
   getAllProducts(){
-    return this.http.get('http://platzi-store.herokuapp.com/products');
+    return this.http.get('http://platzi-store.herokuapp.com/products'); // para obtener los datos de nuestra api
   }
 
   // metodo para buscar un id y que me devuelva todos los datos, recibe un id, la funcion find de js que mandamos un arrayFunction 
   // y si coincide con el id nos devuelve los datos
-  getProduct(id: string){
-    return this.http.get(`http://platzi-store.herokuapp.com/products${id}`);
+  getProduct(id: string) {
+    return this.http.get(`http://platzi-store.herokuapp.com/products${id}`); // hago la concatenacion de la peticion con el id, `` acentos
   }
 }

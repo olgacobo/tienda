@@ -17,6 +17,7 @@ export class ProductsComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.fetchProducts();
   }
 
   // creo una funcion para sacar el output
@@ -25,10 +26,11 @@ export class ProductsComponent implements OnInit {
     console.log(id);
   }
 
-  fetchProducts() {
+  fetchProducts(): void {
+    // tslint:disable-next-line: deprecation
     this.productsService.getAllProducts().subscribe(products => {
       console.log(products);
-    })
+    });
   }
 
 }
