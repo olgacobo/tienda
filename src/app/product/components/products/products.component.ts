@@ -30,7 +30,7 @@ export class ProductsComponent implements OnInit {
   fetchProducts(): void {
     // tslint:disable-next-line: deprecation
     this.productsService.getAllProducts().subscribe(products => {
-      console.log(products);
+      this.products = products;
     });
   }
 
