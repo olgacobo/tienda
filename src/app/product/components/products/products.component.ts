@@ -26,6 +26,7 @@ export class ProductsComponent implements OnInit {
     console.log(id);
   }
 
+  // es para traer los productos de nuestra api
   fetchProducts(): void {
     // tslint:disable-next-line: deprecation
     this.productsService.getAllProducts().subscribe(products => {

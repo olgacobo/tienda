@@ -65,7 +65,9 @@ export class ProductsService {
 
   // metodo para buscar un id y que me devuelva todos los datos, recibe un id, la funcion find de js que mandamos un arrayFunction 
   // y si coincide con el id nos devuelve los datos
+  // tslint:disable-next-line: typedef
   getProduct(id: string) {
-    return this.http.get(`http://platzi-store.herokuapp.com/products${id}`); // hago la concatenacion de la peticion con el id, `` acentos
+    // hago la concatenacion de la peticion con el id, `` acentos
+    return this.http.get(`http://platzi-store.herokuapp.com/products${id}`);
   }
 }
