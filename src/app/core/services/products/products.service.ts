@@ -23,6 +23,12 @@ export class ProductsService {
   // tslint:disable-next-line: typedef
   getProduct(id: string) {
     // hago la concatenacion de la peticion con el id, `` acentos
-    return this.http.get<Product>(`${environment.url_api}${id}`);
+    return this.http.get<Product>(`${environment.url_api}/${id}`);
+  }
+
+  // creo un método para poder añadir productos a la api
+  createProducto(product: Product){
+    // el metodo post necesita una url y un body
+    return this.http.post(environment.url_api, product);
   }
 }
