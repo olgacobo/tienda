@@ -23,19 +23,8 @@ export class ProductDetailComponent implements OnInit {
     // le decimos que quiero los parametros que tenga en la ruta, y me subscribo a esos cambios de tipo params
     // tslint:disable-next-line: deprecation
     this.route.params.subscribe((params: Params) => {
-
       const id = params.id;
-      // console.log(params);
-      // hago referencia para que vaya y busque en ese array un id especifico, getProduct está en products.service.ts
-      // ! es para que no de error this.product ya que implica que no importa si el datos que devuelve es undefined
-      
-      // this.productsService.getProduct(id).subscribe((m: any) => {
-      //   this.producto = m;
-      // });
       this.fetchProducto(id);
-      // this.producto = this.productsService.getProduct(id);
-      // esto al poner la ruta mostraria todos los detalles del producto en la consola
-      // console.log(producto);
     });
   }
 
