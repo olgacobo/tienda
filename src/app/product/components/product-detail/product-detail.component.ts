@@ -48,4 +48,15 @@ export class ProductDetailComponent implements OnInit {
     });
   }
 
+  updateProduct(){
+    const updateProduct: Partial<Product> = {
+      price: 2000,
+      description: 'cambio producto blabla'
+    };
+    // hay que pasarle el id del producto que queremos cambiar, y el cambio
+    this.productsService.updateProduct('100', updateProduct).subscribe(producto => {
+    console.log(producto);
+    });
+  }
+
 }

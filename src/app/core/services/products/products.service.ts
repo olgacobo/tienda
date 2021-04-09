@@ -32,4 +32,10 @@ export class ProductsService {
     // el metodo post necesita una url y un body
     return this.http.post(environment.url_api, product);
   }
+
+  // creo un metodo para editar los productos de la api
+  updateProduct(id: string, changes: Partial<Product>) {
+    // hay que padarle la url y los cambios
+    return this.http.put(`${environment.url_api}/${id}`, changes);
+  }
 }
