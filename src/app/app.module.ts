@@ -5,7 +5,7 @@ import { HttpClientModule } from '@angular/common/http'; // para poder hacer pet
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CartComponent } from './cart/cart.component'; // componente creado desde la cmd
+import { CartComponent } from './shared/components/cart/cart.component'; // componente creado desde la cmd
 
 
 import { LayoutComponent } from './layout/layout.component';
