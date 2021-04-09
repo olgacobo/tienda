@@ -27,7 +27,8 @@ export class ProductsService {
   }
 
   // creo un método para poder añadir productos a la api
-  createProducto(product: Product){
+  // tslint:disable-next-line: typedef
+  createProduct(product: Product){
     // el metodo post necesita una url y un body
     return this.http.post(environment.url_api, product);
   }

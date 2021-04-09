@@ -30,7 +30,21 @@ export class ProductDetailComponent implements OnInit {
 
   fetchProducto(id: string){
     this.productsService.getProduct(id).subscribe(producto => {
-     this.producto = producto;
+    this.producto = producto;
+    });
+  }
+
+  // cuando de al click y esto se ejecute, manda la info a createProduct que la enviara como bosy a la api
+  createProduct() {
+    const newProduct: Product = {
+      id: '100',
+      title: 'rober desde angular',
+      image: 'assets/images/rober.jpeg',
+      price: 10,
+      description: 'nuevo producto blabla'
+    };
+    this.productsService.createProduct(newProduct).subscribe(producto => {
+    console.log(producto);
     });
   }
 
