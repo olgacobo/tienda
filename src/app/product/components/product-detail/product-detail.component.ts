@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router'; // la primera es una inyeccion de dependencia, la segunta un tipado 
+import { ActivatedRoute, Params } from '@angular/router'; // la primera es una inyeccion de dependencia, la segunta un tipado
 import { ProductsService } from '../../../core/services/products/products.service'; // inyección de dependencias
 import { Product } from '../../../core/models/product.model';
 
@@ -59,4 +59,10 @@ export class ProductDetailComponent implements OnInit {
     });
   }
 
+  deleteProduct(){
+    // hay que pasarle el id del producto que queremos borra, rsùesta dara true si lo hemos eliminado correctamente
+    this.productsService.deleteProduct('7').subscribe(respuesta => {
+    console.log(respuesta);
+    });
+  }
 }
